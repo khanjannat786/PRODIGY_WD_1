@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoVerse - Home</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            lightgreen: '#d7f5d7',
+            darkgreen: '#064e3b'
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-lightgreen dark:bg-darkgreen text-gray-900 dark:text-white transition duration-300">
+  
+<nav class="fixed top-0 left-0 w-full bg-white dark:bg-green-800 shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    <a href="index.html" class="text-green-700 dark:text-green-200 font-bold text-xl">EcoVerse</a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 font-medium">
+      <li><a href="#home" class="hover:text-green-600 dark:hover:text-green-300">Home</a></li>
+      <li><a href="#features" class="hover:text-green-600 dark:hover:text-green-300">Features</a></li>
+      <li><a href="#advice" class="hover:text-green-600 dark:hover:text-green-300">Explore Advice</a></li>
+      <li><a href="#contact" class="hover:text-green-600 dark:hover:text-green-300">Contact</a></li>
+    </ul>
+
+    <!-- Theme and Mobile Menu Toggle -->
+    <div class="flex items-center space-x-4">
+      <button id="themeToggle" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full shadow transition duration-300">
+        <span id="themeIcon" class="text-xl">🌞</span>
+      </button>
+      <button id="menuToggle" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <ul id="mobileMenu" class="hidden md:hidden flex-col px-6 pb-4 space-y-2 text-gray-700 dark:text-gray-300 font-medium bg-white dark:bg-green-800">
+    <li><a href="#home" class="block hover:text-green-600 dark:hover:text-green-300">Home</a></li>
+    <li><a href="#features" class="block hover:text-green-600 dark:hover:text-green-300">Features</a></li>
+    <li><a href="#advice" class="block hover:text-green-600 dark:hover:text-green-300">Explore Advice</a></li>
+    <li><a href="#contact" class="block hover:text-green-600 dark:hover:text-green-300">Contact</a></li>
+  </ul>
+</nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="#" class="text-green-700 dark:text-green-200 font-bold text-xl">EcoVerse</a>
+
+      <div class="flex items-center space-x-4">
+        <button id="themeToggle" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full shadow transition duration-300">
+          <span id="themeIcon" class="text-xl">🌞</span>
+        </button>
+
+        <!-- Hamburger Icon -->
+        <button id="menuToggle" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 font-medium">
+        <li><a href="#home" class="hover:text-green-600 dark:hover:text-green-300">Home</a></li>
+        <li><a href="#features" class="hover:text-green-600 dark:hover:text-green-300">Features</a></li>
+        <li><a href="#contact" class="hover:text-green-600 dark:hover:text-green-300">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul id="mobileMenu" class="md:hidden hidden flex-col px-6 pb-4 space-y-2 text-gray-700 dark:text-gray-300 font-medium bg-white dark:bg-green-800">
+      <li><a href="#home" class="block hover:text-green-600 dark:hover:text-green-300">Home</a></li>
+      <li><a href="#features" class="block hover:text-green-600 dark:hover:text-green-300">Features</a></li>
+      <li><a href="#contact" class="block hover:text-green-600 dark:hover:text-green-300">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="pt-16"></div>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center p-4 text-center">
+    <div id="heroAnimation" class="w-72 h-72 mb-4"></div>
+    <h1 class="text-5xl font-extrabold mb-4">Welcome to EcoVerse</h1>
+    <p class="text-lg max-w-2xl">Your personalized green lifestyle assistant. Start making eco-friendly choices with ease and impact today!</p>
+    <a href="#advice" class="mt-6 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Explore Advice</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-12 bg-white dark:bg-green-900 text-center">
+    <h2 class="text-4xl font-bold mb-6 text-green-700 dark:text-green-300">Features</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">🌍 Eco Tips</h3>
+        <p>Daily personalized suggestions to reduce your carbon footprint.</p>
+      </div>
+     <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">💻 Progress Tracker</h3>
+        <p>Track your sustainability journey with visual insights and milestones.</p>
+      </div>
+      <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">🚀 Community  🏠</h3>
+        <p>Join challenges and connect with other eco-conscious individuals.</p>
+      </div>
+    </div>
+  </section>
+<!-- more Advice Section -->
+<section id="home" class="min-h-screen bg-cover bg-center relative text-center flex flex-col justify-center items-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  <div class="relative z-10 text-white p-4">
+    <h1 class="text-5xl font-extrabold mb-4 sparkle-text">Welcome to EcoVerse 🌻</h1>
+    <p class="text-xl max-w-2xl mx-auto">Your personalized green lifestyle assistant. Start making eco-friendly choices today!</p>
+    <a href="#features" class="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Explore Features</a>
+</div>
+    </div>
+  </section>
+  </div>
+</section>
+  
+<!-- Eco Advice Section -->
+<section id="advice" class="py-12 bg-white dark:bg-green-900 text-center">
+  <h2 class="text-4xl font-bold mb-6 text-green-700 dark:text-green-300">🌱 Eco Advice</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+    <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <div class="text-5xl mb-3">🚲</div>
+      <h3 class="text-xl font-semibold mb-2">Bike More</h3>
+      <p>Choose cycling over driving to reduce emissions and stay fit.</p>
+    </div>
+    <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <div class="text-5xl mb-3">💡</div>
+      <h3 class="text-xl font-semibold mb-2">Save Energy</h3>
+      <p>Turn off lights and electronics when not in use to conserve power.</p>
+    </div>
+    <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <div class="text-5xl mb-3">🌿</div>
+      <h3 class="text-xl font-semibold mb-2">Go Green</h3>
+      <p>Plant trees and support local greenery to clean the air.</p>
+    </div>
+    <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <div class="text-5xl mb-3">♻️</div>
+      <h3 class="text-xl font-semibold mb-2">Recycle</h3>
+      <p>Reuse and recycle materials to reduce landfill waste.</p>
+    </div>
+    <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <div class="text-5xl mb-3">🌊</div>
+      <h3 class="text-xl font-semibold mb-2">Protect Water</h3>
+      <p>Use water wisely — fix leaks and avoid unnecessary usage.</p>
+    </div>
+    <div class="bg-lightgreen dark:bg-green-800 p-6 rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <div class="text-5xl mb-3">🛍️</div>
+      <h3 class="text-xl font-semibold mb-2">Use Reusables</h3>
+      <p>Switch to reusable bags, bottles, and containers to reduce plastic use.</p>
+    </div>
+  </div>
+</section>
+<!-- Contact Section -->
+  <section id="contact" class="py-12 bg-lightgreen dark:bg-green-950 text-center">
+    <h2 class="text-4xl font-bold mb-6 text-green-700 dark:text-green-300">Contact Us 📞</h2>
+    <p class="max-w-xl mx-auto mb-6">Have questions or suggestions? We'd love to hear from you.</p>
+    <form id="contactForm" class="max-w-xl mx-auto">
+      <input type="text" placeholder="Your Name" class="w-full mb-4 p-3 rounded bg-white dark:bg-green-800 text-black dark:text-white" required>
+      <input type="email" placeholder="Your Email" class="w-full mb-4 p-3 rounded bg-white dark:bg-green-800 text-black dark:text-white" required>
+      <textarea placeholder="Your Message" class="w-full mb-4 p-3 rounded bg-white dark:bg-green-800 text-black dark:text-white" rows="5" required></textarea>
+      <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">Send Message</button>
+    </form>
+  </section>
+<!-- JavaScript for Popup Notification -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent actual form submission
+    alert('✅ Your message has been sent successfully!');
+    this.reset(); // Optional: clear form fields
+  });
+</script>
+
+  <footer class="bg-green-600 text-white text-center p-4">
+    &copy; 2025 EcoVerse. All rights reserved.
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      lottie.loadAnimation({
+        container: document.getElementById('heroAnimation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets9.lottiefiles.com/private_files/lf30_qnpfavmd.json'
+      });
+
+      const toggleBtn = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+      const htmlEl = document.documentElement;
+
+      if (localStorage.getItem('theme') === 'dark') {
+        htmlEl.classList.add('dark');
+        icon.textContent = '🌙';
+      } else {
+        htmlEl.classList.remove('dark');
+        icon.textContent = '🌞';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        htmlEl.classList.toggle('dark');
+        const isDark = htmlEl.classList.contains('dark');
+        icon.textContent = isDark ? '🌙' : '🌞';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
